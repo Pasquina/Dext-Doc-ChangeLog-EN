@@ -1,3 +1,9 @@
+## 📢  Dext Framework Change Log
+
+This document contains the latest news, breaking changes and new features of the Dext Framework. Most recent updates appear first.
+
+---
+
 ## Welcome to your new Documentation Project
 
 Here are a few tips to get started:

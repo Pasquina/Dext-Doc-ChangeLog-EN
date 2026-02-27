@@ -1,8 +1,9 @@
 html, body {
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;  
+    font-size: 17px;
     background: #252837;
-    color: #eee;    height: 100%;    
+    color: #eee;
+    height: 100%;
     margin: 0;
     overflow: hidden;
 } 
@@ -30,9 +31,6 @@ h4 {
 h5, h6 { 
     font-size: 1.04em;
 }
-
-
-
 
 code {
     padding: 2px 5px;
@@ -817,10 +815,8 @@ code.line-highlight {
         font-family: "Segoe UI Emoji", "Apple Color Emoji", -apple-system, BlinkMacSystemFont,"Segoe UI", Helvetica, Helvetica, Arial, sans-serif;
         text-rendering: optimizeLegibility;
         height: auto;
-        color: #222;
         overflow: visible;
-        font-size: 15.25px;  
-
+        font-size: 15.25px;
     }
     .main-content {
         overflow: visible;

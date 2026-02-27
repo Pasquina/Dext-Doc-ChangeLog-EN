@@ -1,21 +1,35 @@
 {
-  "title": "ChangeLog-EN",
+  "title": "Dext ChangeLog-EN",
+  "byline": "Most Recent Changes Appear First",
   "owner": "VyDevSoft",
   "language": "en-US",
   "topics": [
     {
       "id": "_index",
-      "title": "ChangeLog-EN",
+      "title": "Dext ChangeLog (English)",
       "slug": "ChangeLog-EN",
       "link": "ChangeLog-EN.md",
       "displayType": "index",
       "type": "markdown",
-      "updated": "2026-02-26T21:07:42.989756-06:00",
-      "classInfo": {}
+      "updated": "2026-02-26T21:35:02.4113359-06:00",
+      "classInfo": {},
+      "topics": [
+        {
+          "id": "_j337csmsez",
+          "parentId": "_index",
+          "title": "2026-02-22 - Dext v1.0 Release Candidate: ORM Evolution & Performance",
+          "slug": "ChangeLog-EN/2026-02-22-Dext-v1-0-Release-Candidate-ORM-Evolution-Performance",
+          "link": "ChangeLog-EN/2026-02-22-Dext-v1-0-Release-Candidate-ORM-Evolution-Performance.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "updated": "2026-02-26T23:07:11.5475141-06:00",
+          "classInfo": {}
+        }
+      ]
     }
   ],
   "settings": {
-    "renderTheme": "Dharkan",
+    "renderTheme": "Blue Lagoon",
     "renderThemeMode": "light",
     "showTocIcons": true,
     "topicTypes": {
@@ -43,9 +57,10 @@
       "datatable": "Data table",
       "dataview": "Data view"
     },
-    "webSiteBaseUrl": "",
-    "relativeBaseUrl": "/",
-    "supportEmail": "support@yoursite.com",
+    "webSiteBaseUrl": "https://DextDocs.VyDevSoft.com/",
+    "relativeBaseUrl": "/ChangeLog/EN/",
+    "webSiteHomeUrl": "https://DextDocs.VyDevSoft.com",
+    "supportEmail": "milan@vydevsoft.com",
     "upload": {
       "maxUploadConnections": 5
     }
