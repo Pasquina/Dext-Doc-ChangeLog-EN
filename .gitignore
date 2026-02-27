@@ -1,0 +1,8 @@
+*.bak
+*.*.bak
+*.tmp
+*.saved.md
+~*.*
+__*.*
+wwwroot/
+_docmonster-*/

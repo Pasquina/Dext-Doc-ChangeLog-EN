@@ -1,0 +1,40 @@
+{{% 
+    Script.Layout = "_Layout.html";
+ 
+}}
+<h1 class="content-title">
+    <img src="~/_docmonster/icons/{{ Topic.DisplayType }}.png">    
+    {{ Topic.Title }}
+</h1>
+
+{{ Script.RenderPartial("Under-Construction-Partial.html", Model) }}
+
+<div class="content-body" id="body">
+    {{% if (string.IsNullOrWhiteSpace(Topic.Body)) { }}
+        {{ Helpers.ChildTopicsList() }}        
+    {{% } else { }}
+        {{ Helpers.Markdown(Topic.Body) }}    
+    {{% } }}
+</div>
+
+{{% if (!string.IsNullOrEmpty(Topic.Remarks))  { }}
+    <h3 class="outdent" id="remarks">Remarks</h3>
+    {{! Helpers.Markdown(Topic.Remarks) }}
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Topic.Example))  { }}
+    <h3 class="outdent" id="example">Example</h3>
+    {{! Helpers.Markdown(Topic.Example) }}
+{{% } }}
+
+
+{{% if (!string.IsNullOrEmpty(Model.Topic.SeeAlso)) { }}
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        {{ Helpers.FixupSeeAlsoLinks(Topic.SeeAlso) }}
+    </div>
+{{% } }}
+
+
+
+ 

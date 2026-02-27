@@ -1,0 +1,63 @@
+﻿{{%
+   Script.Layout = "_Layout.html";
+}}
+<h2 class="content-title">
+   <img src="~/_docmonster/icons/{{ Topic.DisplayType }}.png">
+   {{ Model.Topic.Title }}
+</h2>
+
+
+<div class="content-body" id="body">
+   {{! Model.Helpers.Markdown(Topic.Body) }}
+</div>
+
+
+{{% if (!string.IsNullOrEmpty(Topic.ClassInfo.InheritanceTree)) { }}
+   <small>
+       {{ Helpers.FormatInheritanceTree() }}
+   </small>
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Topic.Remarks)) { }}
+
+   <h3 class="outdent" id="remarks">Remarks</h3>
+   {{! Helpers.Markdown(Topic.Remarks) }}
+{{% } }}
+
+<h3 id="classmembers">Enum Values</h3>
+
+
+<div style="margin-bottom: 1em">
+{{ Helpers.ClassMemberTable() }}
+</div>
+
+
+{{% if (!string.IsNullOrEmpty(Topic.Example)) { }}
+   <h3 class="outdent" id="example">Example</h3>
+   {{! Helpers.Markdown(Topic.Example) }}
+{{% } }}
+
+
+{{% if (!string.IsNullOrEmpty(Topic.ClassInfo.Contract))  { }}
+   <h3 class="contracts" id="example">Contracts</h3>
+   {{! Helpers.Markdown(Topic.ClassInfo.Contract) }}
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Topic.ClassInfo.Namespace)) { }}
+   <b>Namespace:</b> {{ Topic.ClassInfo.Namespace }}
+   <br/>
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Topic.ClassInfo.Assembly)) { }}
+   <p><b>Assembly:</b> {{ Topic.ClassInfo.Assembly }}</p>    
+   <br/>
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Model.Topic.SeeAlso)) { }}
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        {{ Helpers.FixupSeeAlsoLinks(Topic.SeeAlso) }}
+    </div>
+{{% } }}
+
+

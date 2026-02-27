@@ -1,0 +1,32 @@
+{{%
+    Script.Layout = "_layout.html";
+}}
+<h1 class="content-title">
+    <img src="~/_docmonster/icons/{{ Topic.DisplayType }}.png">    
+    {{ Topic.Title }}
+</h1>
+
+<div class="content-body" id="body">
+{{ Helpers.Markdown(Topic.Body) }}
+</div>
+
+
+{{% if (!string.IsNullOrEmpty(Topic.Remarks)) { }}
+    <h3 class="outdent" id="remarks">Remarks</h3>
+    {{! Helpers.Markdown(Topic.Remarks) }}
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Topic.Example)) { }}
+    <h3 class="outdent" id="example">Example</h3>
+    {{! Helpers.Markdown(Topic.Example) }}
+{{% } }}
+
+<div style="margin-bottom: 1em">
+{{ Helpers.ChildTopicsTable(null,"Type Name") }}
+</div>
+
+{{% if (!string.IsNullOrEmpty(Topic.ClassInfo.Assembly)) { }}
+    <p><b>Assembly:</b> {{ Topic.ClassInfo.Assembly }}</p>    
+    <br/>
+{{% } }}
+

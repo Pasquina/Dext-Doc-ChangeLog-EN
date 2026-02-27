@@ -1,0 +1,67 @@
+html, body {
+    color: #eee;
+    background: #292929;
+} 
+h1,h2,h3,h4,h5,h6, .byline,.content-title {
+  color: #89a6b9;
+}
+code {
+
+    background: #393939;
+    color: #ddd;
+}
+.syntaxbox {
+    background: #323232;
+    color: #ddd;
+    border: 1px solid #3f3f3f;
+}
+blockquote {
+    background: #383838;    
+    border-left: 0.65em #3b5572 solid;    
+}
+blockquote code { background: #292929}
+table th {
+    color:  #eee;
+    background:#222;
+}
+ table td {
+        border: solid 1px #555;
+}
+table tr {
+    background: #353535;
+    color: #eee;
+    border: solid 1px #616161;
+}
+table tr:nth-child(even) {
+    background: #2a2a2a;
+}
+.byline{
+    color: #ccc;
+}
+.content-body a, a {
+   color: #76a9e4;
+}
+.content-body a:hover, a:hover {
+    color: #89c8fb;
+}
+.banner {    
+    background: #333;
+}
+.content-title {
+    color: #76a9e4;
+}
+.toc-content {
+    background: #292929;
+}
+.toc-header, .toc-menu {
+    background: #404040;
+}
+.toc-header .btn-secondary {
+    background: #444;
+    color: #ddd;
+}
+
+.line-highlight {
+    background: #436683 !important;
+    color: white;
+}

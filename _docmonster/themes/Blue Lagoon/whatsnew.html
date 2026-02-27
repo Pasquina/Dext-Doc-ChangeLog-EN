@@ -1,0 +1,44 @@
+﻿{{%
+Script.Layout = "_layout.html";
+}}
+
+<h2 class="content-title">
+    <img src="~/_docmonster/icons/{{ Model.Topic.DisplayType }}.png">
+    {{ Model.Topic.Title }}
+</h2>
+
+<div class="content-body" id="body">
+    {{% if (Topic.IsLink && Topic.Body.Trim().StartsWith("http") ) { }}        
+        <ul>
+        <li> 
+            <a href="{{! Model.Topic.Body }}" target="_blank">{{ Model.Topic.Title }}</a> 
+            <a href="{{! Model.Topic.Body }}" target="_blank"><i class="fa-solid fa-up-right-from-square" style="font-size: 0.7em; vertical-align: super;"></i></a>
+        </li>
+        </ul>
+        {{% if( Topic.TopicState.IsPreview ) { }}
+        <blockquote style="font-size: 0.8em;"><i>In rendered output this link opens in a new browser window. 
+            For preview purposes, the link is displayed in this generic page. 
+            You can click the link to open the browser with the link which is the behavior you see when rendered.</i>
+        </blockquote>
+        {{% } }}
+    {{% } else { }}
+        {{ Model.Helpers.Markdown(Model.Topic.Body) }}
+    {{% } }}
+</div>
+
+{{% if (!string.IsNullOrEmpty(Model.Topic.Remarks)) {  }}
+    <h3 class="outdent" id="remarks">Remarks</h3>
+    {{ Model.Helpers.Markdown(Model.Topic.Remarks) }}
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Model.Topic.Example))  {  }}
+    <h3 class="outdent" id="example">Example</h3>
+    {{ Model.Helpers.Markdown(Model.Topic.Example) }}
+{{% } }}
+
+{{% if (!string.IsNullOrEmpty(Model.Topic.SeeAlso)) { }}
+    <h4 class="outdent" id="seealso">See also</h4>
+    <div class="see-also-container">
+        {{ Helpers.FixupSeeAlsoLinks(Topic.SeeAlso) }}
+    </div>
+{{% } }}

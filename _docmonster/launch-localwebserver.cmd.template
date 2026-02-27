@@ -1,0 +1,7 @@
+REM Uses free tool `LiveReloadServer`
+REM https://github.com/RickStrahl/LiveReloadServer
+
+LiveReloadServer ./ --virtualPath {virtualPath}
+
+REM If you installed using the standalone Exe/installer use:
+REM LiveReloadWebServer ./ --virtualPath {virtualPath}

@@ -1,0 +1,53 @@
+{
+  "title": "ChangeLog-EN",
+  "owner": "VyDevSoft",
+  "language": "en-US",
+  "topics": [
+    {
+      "id": "_index",
+      "title": "ChangeLog-EN",
+      "slug": "ChangeLog-EN",
+      "link": "ChangeLog-EN.md",
+      "displayType": "index",
+      "type": "markdown",
+      "updated": "2026-02-26T21:07:42.989756-06:00",
+      "classInfo": {}
+    }
+  ],
+  "settings": {
+    "renderTheme": "Dharkan",
+    "renderThemeMode": "light",
+    "showTocIcons": true,
+    "topicTypes": {
+      "index": "Top level topic for the documentation.",
+      "header": "Header topic for sub-topics",
+      "topic": "Generic topic",
+      "whatsnew": "What's new",
+      "weblink": "External link",
+      "classheader": "Class Header",
+      "interface": "Interface",
+      "namespace": "Namespace",
+      "classmethod": "Class method",
+      "classproperty": "Class property",
+      "classfield": "Class field",
+      "classevent": "Class event",
+      "classconstructor": "Class constructor",
+      "enum": "Enumeration",
+      "delegate": "Delegate",
+      "webservice": "Web Service",
+      "webserviceendpoint": "Web Service Endpoint",
+      "database": "Database",
+      "datacolumn": "Data columns",
+      "datafunction": "Data function",
+      "datastoredproc": "Data stored procedure",
+      "datatable": "Data table",
+      "dataview": "Data view"
+    },
+    "webSiteBaseUrl": "",
+    "relativeBaseUrl": "/",
+    "supportEmail": "support@yoursite.com",
+    "upload": {
+      "maxUploadConnections": 5
+    }
+  }
+}

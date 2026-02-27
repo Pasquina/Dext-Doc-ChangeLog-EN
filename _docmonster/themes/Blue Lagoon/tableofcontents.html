@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+    <title>{{ Project.Title }}</title>
+    <meta http-equiv="cache-control" CONTENT="public">
+    <meta http-equiv="cache-control" CONTENT="private">
+
+    <link rel="stylesheet" type="text/css" href="_docmonster/themes/scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_docmonster/themes/scripts/fontawesome/css/font-awesome.min.css" />
+    
+
+    <script src="_docmonster/themes/{theme}/scripts/jquery/jquery.min.js"></script>
+    <script src="_docmonster/scripts/ww.jquery.min.js"></script>
+    <script src="_docmonster/scripts/wwhelp.js"></script>
+</head>
+<body style="overflow: auto;">
+    <div class="toc-content" >        
+        <div class="toc-header">
+            <div class="toc-menu">
+                <!-- HOME LINK - enable and add HREF to link back to your site -->
+                <a href="{{ Project.Settings.WebSiteBaseUrl }}" class="btn btn-link btn-sm"><i class="fa fa-home"></i> Home</a>
+
+                <a href="javascript:helpBuilder.tocCollapseAll()" class="btn btn-link btn-sm" title="Collapse all topics"><i class="fa fa-minus-circle"></i></a>
+                <a href="javascript:helpBuilder.tocExpandAll()" class="btn btn-link btn-sm" title="Expand all topics"><i class="fa fa-plus-circle"></i></a>
+            </div>
+
+            <div class="input-group input-group-sm mt-2 mr-2 mb-2" style="margin-right: 4em !important; padding: 0 0.2em;">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-search" style="font-size: 0.8em;"></i>
+                    <span id="SearchMode" class="small">Simple</span> <span class="caret"></span>
+                </button>
+                
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#searchSimple" onclick="searchModeSelection('Simple')" 
+                        title="Searches topic titles for exact search text.">
+                        Simple
+                        </a>
+                    </li>
+                    <li id="SearchDetailed">
+                        <a class="dropdown-item" href="#searchAdvanced" onclick="searchModeSelection('Detailed')" 
+                        title="Detailed topic search: 
+                * Loads a potentially large index on first search.
+                * Searches title, body, id and keywords.
+                * Works off whole words, not partial text.
+                * Returns weighted results and supports wildcard searches.
+                * Tends to be slower on first search.">Detailed</a>
+                    </li>
+                </ul>				
+                            
+                <input type="text" id="SearchBox" class="form-control form-control-sm" placeholder="Search topic headers">
+                <span class="input-group-text" id="basic-addon" title="clear search text">
+                    <i id="SearchBoxClearButton" style="font-size: 0.8" class="fad fa-xmark-circle"></i>
+                </span>        
+                <input type="hidden" id="SearchAdvanced" name="SearchAdvanced" value="Simple">
+            </div>
+
+            <script>
+                function searchModeSelection(mode) {            
+                    $("#SearchAdvanced").val(mode);
+                    $("#SearchMode").text(mode);
+                    $("#SearchBox").triggerHandler("keyup");
+                    
+                    helpBuilder.search.mode = mode.toLowerCase();
+                }
+            </script>
+        </div>
+
+        <div class="toc-nav-container">
+            <nav>
+                <ul class="toc">         
+                    {{! Topic.TopicState.Data }}
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        if (typeof (jQuery) == 'undefined')
+            document.write(unescape("%3Cscript src='templates/scripts/jquery.js' %3E%3C/script%3E"));
+    </script>   
+    <script>
+        helpBuilder.initializeTOC();
+    </script>
+</body>
+
+</html>
