@@ -1,4 +1,4 @@
-## 📢  Dext Framework Change Log
+## Dext Framework Change Log
 
 This document contains the latest news, breaking changes and new features of the Dext Framework. Most recent updates appear first.
 

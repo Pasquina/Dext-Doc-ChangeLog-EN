@@ -11,6 +11,7 @@
       "link": "ChangeLog-EN.md",
       "displayType": "index",
       "type": "markdown",
+      "isExpanded": true,
       "updated": "2026-02-26T21:35:02.4113359-06:00",
       "classInfo": {},
       "topics": [
@@ -22,7 +23,31 @@
           "link": "ChangeLog-EN/2026-02-22-Dext-v1-0-Release-Candidate-ORM-Evolution-Performance.md",
           "displayType": "topic",
           "type": "markdown",
-          "updated": "2026-02-26T23:07:11.5475141-06:00",
+          "sortOrder": 20,
+          "updated": "2026-02-27T20:51:08.528748-06:00",
+          "classInfo": {}
+        },
+        {
+          "id": "_01xyshx2ih",
+          "parentId": "_index",
+          "title": "2026-02-06 - Dext.Entity: DBType Propagation & Legacy Paging",
+          "slug": "ChangeLog-EN/2026-02-06 - Dext.Entity: DBType Propagation & Legacy Paging",
+          "link": "ChangeLog-EN/2026-02-06 - Dext.Entity: DBType Propagation & Legacy Paging.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "sortOrder": 10,
+          "updated": "2026-02-27T21:07:47.1829215-06:00",
+          "classInfo": {}
+        },
+        {
+          "id": "_59mdry8z5n",
+          "parentId": "_index",
+          "title": "2026-02-06 - Dext.Entity: JSON Queries",
+          "slug": "ChangeLog-EN/2026-02-06-Dext-Entity-JSON-Queries",
+          "link": "ChangeLog-EN/2026-02-06-Dext-Entity-JSON-Queries.md",
+          "displayType": "topic",
+          "type": "markdown",
+          "updated": "2026-02-27T21:32:03.3311409-06:00",
           "classInfo": {}
         }
       ]
